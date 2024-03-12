@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgba(20, 13, 13, 0.854);
+   background-image: url(../assets/background.avif);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -72,6 +72,17 @@ button:hover{
     opacity: 1;
 }
 
+
 .error-div{
     display: none;
+    position: absolute;
+    background-color: brown;
+    border: 2px solid black;
+    bottom: 15px;
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
 }
