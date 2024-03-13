@@ -5,7 +5,8 @@
 }
 
 body{
-   background-image: url(../assets/background.avif);
+    background-image: url(../assets/back.jpg);
+    /* background-color: rgba(105, 16, 189, 0.521); */
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,12 +15,7 @@ body{
     align-items: center; 
 }
 
-/* .line{
-    position: absolute;
-    background-color: black;
-    width: 100px;
-    height: 2px; 
-} */
+
 .container{
     
     background-color: rgb(118, 24, 169);
@@ -76,7 +72,7 @@ button:hover{
 .error-div{
     display: none;
     position: absolute;
-    background-color: brown;
+    background-color: rgba(180, 8, 8, 0.753);
     border: 2px solid black;
     bottom: 15px;
     width: auto;
@@ -85,4 +81,8 @@ button:hover{
     display: flex;
     flex-direction: column;
     gap: 1vh;
+}
+
+#error-modal{
+    display: none;
 }
