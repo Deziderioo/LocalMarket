@@ -34,7 +34,7 @@ $(document).ready(function(){
             totalPreco += item.preco;
         });
 
-
+z   
         totalElement.text(`Total: R$ ${totalPreco.toFixed(2)}`);
 
         
@@ -50,3 +50,39 @@ $(document).ready(function(){
   
     exibirCarrinho();
 })
+
+function gerarDocumentoWord(){
+    const listaElement = document.getElementById("lista");
+    const totalElement = document.getElementById("total");
+
+    //clona lista para evitar modificacoes diretas na original
+    const lsitaClone = listaElement.cloneNode(true);
+    
+    $(lsitaClone).find("button").remove();
+
+    const listahtml = lista.innerHTML
+    const totalHtml = totalElement.innerHTML
+
+    const counteudoHtml = `
+        <html>
+            <head>
+            <meta charset="UTF-8"/>
+            <body>
+                <h1>PEDIDO CONFIRMADO</h1>
+                <h3>Agradecemos sua preferencia</h3>
+                <br/>
+                ${listahtml}
+                <br/> <br/>
+                ${totalHtml}
+            </body>
+            </head>
+        </html>
+    `;
+
+
+    const blob = new Blob([counteudoHtml], {type: "apllication/msword"});
+}
+
+function sucessClose(){
+    document.getElementById("pedido").style.display = "none"
+}
